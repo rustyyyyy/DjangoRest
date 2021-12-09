@@ -1,1 +1,1 @@
-# DjangoRest
+# Rest Api implementation in django
