@@ -9,4 +9,4 @@ class productEdit(forms.ModelForm):
 class productAdd(forms.ModelForm):
     class Meta:
         model = product
-        fields = ['name', 'description', 'price']
+        fields = ['name', 'description', 'price','date']

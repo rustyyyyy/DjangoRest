@@ -13,6 +13,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th>Date</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                 <td>{{product.name}}</td>
                 <td>{{product.description}}</td>
                 <td>{{product.price}}</td>
+                <td>{{product.date}}</td>
                 <td class="row">
 
                     <a href="{% url 'edit-product' product.id %}" class="btn btn-info mr-2">Edit</a>
