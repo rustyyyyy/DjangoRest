@@ -3,8 +3,8 @@ from django.http import JsonResponse
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import productSerializer
-from .models import product
+from base.serializers import productSerializer
+from base.models import product
 
 
 @api_view(['GET'])
@@ -17,7 +17,6 @@ def apiOverview(request):
         'Delete' : '/product-delete/<str:pk>/',
     }
     return Response(api_urls)
-
 @api_view(['GET'])
 def productList(request):
     products = product.objects.all()
@@ -52,6 +51,3 @@ def productDelete(request,pk):
     if serializer.is_valid():
         products.delete()
     return Response(serializer.data)
-
-
-
