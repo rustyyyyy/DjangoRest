@@ -7,21 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
     <title>Product</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="mt-4">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-
+            <div class="col-md-2" >
+                <div >
+                   <a class="btn btn-info btn-sm my-2" href="/product"> Product</a> <br>
+                   <a class="btn btn-info  btn-sm my-2" href="/brands"> Brand</a>
+                </div>
+            </div>
+            <div class="col-md-10">
                 {% block content %}
-
 
                 {% endblock %}
             </div>
         </div>
     </div>
+    </div>
+    
 </body>
 
 </html>
