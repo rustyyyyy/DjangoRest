@@ -5,36 +5,28 @@
 <div class="">
 
     <div class="mb-4">
-        <h4 class="mb-3"> All Products</h4>
-        <a href="{% url 'add-product' %}" class="btn btn-primary">Add</a>
+        <h4 class="mb-3"> All Brand</h4>
+        <a href="{% url 'add-brand' %}" class="btn btn-primary">Add</a>
     </div>
 
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-5">
             <table class="table table-striped mt-4" id="datatable" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Brand Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Date</th>
-                        <th>Actions</th>
+                        <th width="60%">Name</th>
+                        <th width="30%">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for product in products %}
+                    {% for brand in brands %}
                     <tr>
-                        <td>{{product.name}}</td>
-                        <td>{{product.brandname}}</td>
-                        <td>{{product.description}}</td>
-                        <td>{{product.price}}</td>
-                        <td>{{product.date}}</td>
+                        <td>{{brand.name}}</td>
                         <td class="row">
 
-                            <a href="{% url 'edit-product' product.id %}" class="btn btn-info mr-2">Edit</a>
+                            <a href="{% url 'edit-brands' brand.id %}" class="btn btn-info mr-2">Edit</a>
 
-                            <form method="post" action="{% url 'delete-product' product.id %}">
+                            <form method="post" action="{% url 'delete-brands' brand.id %}">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>

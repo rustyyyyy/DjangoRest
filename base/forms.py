@@ -1,12 +1,22 @@
 from django import forms
-from .models import product
+from .models import product,Brand
 
-class productEdit(forms.ModelForm):
+class productForm(forms.ModelForm):
     class Meta:
         model = product
         fields = "__all__"
+        widgets ={
+            'name':forms.TextInput(attrs={'class':'form-control col-md-6'}),
+            'brandname':forms.Select(attrs={'class':'form-control col-md-6'}),
+            'date':forms.DateInput(attrs={'class':'form-control col-md-6','type':'date'}),
+            'description':forms.TextInput(attrs={'class':'form-control col-md-6','type':'text'}),
+            'price':forms.NumberInput(attrs={'class':'form-control col-md-6'})
+        }
 
-class productAdd(forms.ModelForm):
+class BrandForm(forms.ModelForm):
     class Meta:
-        model = product
-        fields = ['name', 'description', 'price','date']
+        model = Brand
+        fields = "__all__"
+        widgets ={
+            'name':forms.TextInput(attrs={'class':'form-control col-md-6'}),
+        }

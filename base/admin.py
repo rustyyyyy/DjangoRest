@@ -3,7 +3,5 @@ from django.contrib import admin
 # Register your models here.
 from .models import product,Brand
 
-# registerlist = ['product','Brand']
-
 admin.site.register(product)
 admin.site.register(Brand)
