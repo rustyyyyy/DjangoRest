@@ -6,7 +6,7 @@ class Brand(models.Model):
     name = models.CharField(max_length=250)
     
     def __str__(self):
-        return self.name
+        return '%s' %(self.name)
 
 class product(models.Model):
     brandname = models.ForeignKey(Brand, on_delete=models.CASCADE)
