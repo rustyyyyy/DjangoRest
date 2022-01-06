@@ -1,3 +1,4 @@
 {
-    "files.autoSave": "off"
+    "files.autoSave": "off",
+    "python.formatting.provider": "autopep8"
 }

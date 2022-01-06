@@ -1,3 +1,4 @@
-./base/migrations/
+./base/
 ./RestApp/__pycache__/
-./.vscode
+./.vscode/
+.users/__pycache__/
