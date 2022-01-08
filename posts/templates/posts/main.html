@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block scripts %} 
+    <script src="{% static 'posts/main.js' %}" defer></script>
+{% endblock scripts %} 
+
+{% block title %} Posts {% endblock title %} 
+
+{% block content %}
+
+<p>Posts</p>
+<div id="posts"> </div>
+<div class="spinner-border"  id="spinnerBox"></div>
+<div class="mb-2" id="end-box">
+    <button id='load-btn'  class="btn btn-primary" type="button">Load more</button>
+</div>
+
+{% endblock content %}
