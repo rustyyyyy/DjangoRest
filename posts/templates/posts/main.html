@@ -9,11 +9,46 @@
 
 {% block content %}
 
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="addPostmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#addPostmodal">
+  Add post
+</button>
+
 <p>Posts</p>
 <div id="posts"> </div>
 <div class="spinner-border"  id="spinnerBox"></div>
 <div class="mb-2" id="end-box">
     <button id='load-btn'  class="btn btn-primary" type="button">Load more</button>
 </div>
+<p id="endBox"></p>
 
 {% endblock content %}
